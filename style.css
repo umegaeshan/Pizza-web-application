@@ -8,15 +8,34 @@
 
 body{
     background-color: rgb(66, 66, 66);
+    background-image: url(leaves-collection-table.jpg);
+}
+
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    font-size: 20px;
+    background-color: brown;
+    position: fixed;
+    width:100%;
+    z-index: 10;
+    
+}
+
+.logo{
+    color:white;
+    text-shadow: 3px 3px 3px black;
+    cursor: pointer;
+    
 }
 
 .logo_icon{
-    color:white;
-    text-shadow: 3px 3px 3px black;
-    padding:10px;
+    padding:5px;
     animation-name: move;
     animation-duration:  2s;
-    transition-timing-function: ease-in;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -33,66 +52,65 @@ body{
     }
 }
 
-.logo{
-    color:white;
-    text-shadow: 3px 3px 3px black;
-    
-}
-
-
-.nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 30px;
-    font-size: 25px;
-    background-color: brown;
-    
-}
-
-ul{
-    display: flex;
-    justify-content: space-between;
-    padding:0px 30px;
-    
-   
-}
-
-
 .nav ul{
     display: flex;
-    gap:60px;
+    gap:40px;
     
 }
 
 a{
      color:white;
      text-shadow: 2px 2px 2px black;
+     font-weight: bolder;
+     font-size: 23px;
 }
+
 
 input{
     height: 35px;
     border-radius: 20px;
-    padding-left: 10px;
+    padding: 0px 10px;
     font-size: 15px;
     font-style: italic;
     font-weight: bolder;
     text-indent: 5px;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
+    border: none;
     width:300px;
 }
 
+ul{
+    display: flex;
+    justify-content: space-between;
+    padding:0px 30px;
+  
+}
+
+
+
+.button button{
+    padding:7px 14px;
+    margin:7px;
+    border-radius: 20px;
+    font-weight: bolder;
+    font-size: 15px;
+    cursor: pointer;
+    border:none;  
+}
+
 .content{
-    padding:50px 50px;
+    padding: 50px;
     border:5px solid black;
-    border-radius: 25px;;
+    border-radius: 25px;
+    padding-top: 200px;
 }
 
 .g_container{
     display: grid;
     border-radius: 23px;;
     grid-template-columns: 40% 60%;
-    padding:50px;
+    padding:40px 0px 40px 60px;
+    gap:20px;
     background-color:hsla(0,32%,46%,1);
     background-image:
     radial-gradient(at 64% 42%, hsla(0,100%,64%,1) 0px, transparent 50%),
@@ -103,7 +121,6 @@ input{
 
 }
 
-
 .g_container img{
     border-radius: 20px;
     box-shadow: 9px 9px 10px black;
@@ -111,30 +128,19 @@ input{
 }
 
 .g_container p{
-    font-size: 30px;
-    font-style: italic;
-    letter-spacing: 1px;
-    padding-left: 0px;
+    font-size: 35px;
+    padding-right: 50px;
+    text-shadow: 2px 3px 4px black;
+    color:white;
+    font-style: normal;
+    letter-spacing: 1.5px;
     text-align: center;
-    text-wrap: wrap;
     line-height: 35px;
     font-weight: bolder;
-    align-items: center;
-    justify-content: center;
-
-
+    width:1000px;
+    
 }
 
-.nav .button button{
-    padding:7px 10px;
-    margin:13px;
-    border-radius: 20px;
-    font-weight: bolder;
-    font-size: 15px;
-    
-    
-
-}
 .heighlight:hover{
     background-color: rgb(245, 153, 49);
     padding:10px;
@@ -154,43 +160,132 @@ input{
 
 }
 
-.sliding_container{
+
+.sliding_container {
     position: relative;
     display: flex;
-    margin: 2%;
+    margin:40px;
     justify-content: center;
     
-    
-    
+
 }
 
-.sliding_container img{
-    border-radius: 20px;
-    
-    
-}
-
-.sliding_container .slider{
+.sliders {
     display: flex;
-    gap:35px;
+    gap: 25px;
+
 }
 
-.sliding_container .overlay_text{
+.slider {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.slider img {
+    border-radius: 20px;
+    transition: transform 0.5s ease;
+    width: 336px;
+    height: 224px;
+}
+
+.overlay_text {
     position: absolute;
-    color:white;
-    font-size: 60px;
-    top:0;
-    bottom: 0;
-    left:0;
-    right: 0;
-    background-color: rgb(56, 55, 55);
-    display:flex;
-    align-items: center;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background-color: rgba(56, 55, 55, 0.7);
+    color: white;
+    font-size: 45px;
+    display: flex;
     justify-content: center;
+    align-items: center;
     opacity: 0;
-    transition: opacity 0.6s ease;
+    transition: opacity 0.3s ease;
 }
 
-.sliding_container:hover .overlay_text{
-    opacity: 0.8;
+.slider:hover .overlay_text {
+    opacity: 1;
+}
+
+.slider:hover img {
+    transform: scale(1.5);
+}
+
+.hr hr{
+    border: none;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.pizzas{
+    margin: 100px 50px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.pizzas img{
+    width:20%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 100px black;
+}
+
+.pizzas button{
+    height: 50px;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    margin-top: 250px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.pizzas img:hover{
+    transform: scale(1.25);
+    transition-duration: 1s ;
+    
+}
+
+.pizzas img:hover button{
+   transform: scale(1.25);
+    transition-duration: 1s ;
+} 
+
+
+footer{
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    padding: 30px ;
+}
+.links {
+    display: flex;
+    padding:5px;
+    gap:30px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.s_logos{
+    display: flex;
+    margin:0px 30px;
+    padding:5px;
+    gap:30px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.s_logos i{
+    cursor: pointer;
 }
