@@ -12,15 +12,16 @@ body{
     background-image: url(leaves-collection-table.jpg);
     background-size: cover;
     background-position: center;
+    color:white;
     
 }
 
 .form{
-    width:450px;
+    width:550px;
     background-color:transparent;
     color:white;
     font-size: 17px;
-    padding:30px 40px;
+    padding:50px 70px;
     border-radius: 24px;
     border:2px solid white;
     backdrop-filter: blur(5px);
@@ -36,6 +37,8 @@ body{
     height: 50px;
     margin:30px 0px;
     position: relative;
+    color:rgb(8, 8, 8);
+    background-color: white;
 }
 
 .inputs {
@@ -51,7 +54,7 @@ body{
 }
 
 .form .inputs::placeholder{
-    color:white;
+    color:rgb(0, 0, 0);
 }
 
 .inputs i{
@@ -59,15 +62,15 @@ body{
 }
 .input_box .user{
     position: absolute;
-    right: 70px;
-    top:28%
+    right: 86px;
+    top:27%
     
 }
 
 .input_box .lock{
     position: absolute;
-    right: 70px;
-    top:52%
+    right: 86px;
+    top:46%
     
 }
 
@@ -76,6 +79,8 @@ body{
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
+    font-size: 25px;
+    padding-bottom: 30px;
 
 }
 
@@ -89,7 +94,7 @@ body{
     margin: 10px;
     width:100%;
     height: 45px;
-    background-color: white;
+    background-color: rgb(255, 223, 43);
     border: none;
     outline: none;
     border-radius: 20px;
@@ -104,13 +109,17 @@ body{
 
 .form .dont_have p{
     margin: 20px;
+    padding-top:20px;
     text-align: center;
+    font-size: 25px;
 
 }
 
 
 .form .dont_have p a{
     padding-left: 5px;
+    font-size: 25px;
    font-weight: bolder;
+   color:rgb(255, 255, 255)
 
 }
